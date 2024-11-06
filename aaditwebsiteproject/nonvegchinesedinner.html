@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Veg Chinese Dinner</title>
+    <style>
+        body {
+            background-image: url('assets/chinabg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .recipe-button {
+            display: block;
+            width: 300px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 30px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .recipe-text {
+            display: none;
+            font-size: 20px;
+            margin: 10px 0;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            border-radius: 8px;
+            width: 70%;
+            margin: 20px auto;
+        }
+
+        .nav-button {
+            position: absolute;
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        .home-button {
+            top: 20px;
+            right: 20px;
+            color: red;
+        }
+
+        .back-button {
+            bottom: 20px;
+            right: 20px;
+            background-color: red;
+            color: black;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Non-Veg Chinese Dinner</h1>
+
+    <button class="recipe-button" onclick="toggleRecipe('recipe1')">General Tso's Chicken</button>
+    <div id="recipe1" class="recipe-text">Crispy fried chicken in a tangy and spicy sauce.</div>
+
+    <button class="recipe-button" onclick="toggleRecipe('recipe2')">Honey Sesame Chicken</button>
+    <div id="recipe2" class="recipe-text">Crispy chicken pieces glazed with honey and sesame seeds.</div>
+
+    <button class="recipe-button" onclick="toggleRecipe('recipe3')">Crispy Duck with Pancakes</button>
+    <div id="recipe3" class="recipe-text">Crispy duck served with pancakes, scallions, and hoisin sauce.</div>
+
+    <button class="recipe-button" onclick="toggleRecipe('recipe4')">Beef and Pepper Stir-Fry</button>
+    <div id="recipe4" class="recipe-text">Sautéed beef with bell peppers in a savory sauce.</div>
+
+    <button class="recipe-button" onclick="toggleRecipe('recipe5')">Lamb with Garlic and Black Bean Sauce</button>
+    <div id="recipe5" class="recipe-text">Tender lamb cooked with garlic and black beans in a flavorful sauce.</div>
+
+    <a href="home.html" class="nav-button home-button">Food Recipe Home</a>
+    <a href="nonvegchinese.html" class="nav-button back-button">Back</a>
+
+    <script>
+        function toggleRecipe(id) {
+            var recipe = document.getElementById(id);
+            recipe.style.display = recipe.style.display === "none" || recipe.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
