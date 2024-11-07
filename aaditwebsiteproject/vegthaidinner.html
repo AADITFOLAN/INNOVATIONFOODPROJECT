@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Thai Dinner</title>
+    <style>
+        body {
+            background-image: url('assets/thaibg.jpeg'); /* Replace with the actual Thai dinner background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-family: 'Lucida Sans', sans-serif;
+            color: #ffcc00; /* Golden yellow for Thai feel */
+        }
+
+        .nav-button {
+            position: absolute;
+            font-size: 20px;
+            color: #ffcc00; /* Golden yellow for Thai feel */
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        .home-button {
+            top: 20px;
+            right: 20px;
+            color: #ffcc00;
+        }
+
+        .back-button {
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffcc00;
+            color: black;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .recipe-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .recipe-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: black;
+            width: 220px;
+            margin: 10px;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .recipe-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .recipe-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .recipe-button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .recipe-button:hover {
+            background-color: #cc9e00;
+        }
+
+        .recipe-text {
+            display: none;
+            font-size: 12px;
+            margin-top: 10px;
+            padding: 8px;
+            background-color: rgba(240, 240, 240, 0.9);
+            color: black;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Veg Thai Dinner</h1>
+
+    <a href="home.html" class="nav-button home-button">Food Recipe Home</a>
+
+    <div class="recipe-grid">
+        <div class="recipe-card">
+            <img src="assets/thai-green-curry.jpg" alt="Thai Green Curry">
+            <h3>Thai Green Curry</h3>
+            <p>Rich and creamy green curry with vegetables.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe1')">See Recipe</button>
+            <div id="recipe1" class="recipe-text">A flavorful Thai curry made with coconut milk, green curry paste, and a mix of vegetables like zucchini, eggplant, and bell peppers.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/thai-pad-thai.jpg" alt="Thai Pad Thai">
+            <h3>Thai Pad Thai</h3>
+            <p>Stir-fried noodles with tamarind, peanuts, and tofu.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe2')">See Recipe</button>
+            <div id="recipe2" class="recipe-text">A classic stir-fried noodle dish made with rice noodles, tofu, peanuts, bean sprouts, and tamarind sauce for a tangy flavor.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/thai-spring-rolls.jpg" alt="Thai Spring Rolls">
+            <h3>Thai Spring Rolls</h3>
+            <p>Fresh rice paper rolls filled with vegetables and herbs.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe3')">See Recipe</button>
+            <div id="recipe3" class="recipe-text">Crisp and fresh spring rolls stuffed with veggies, herbs, and served with a side of spicy peanut dipping sauce.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/thai-tom-kha-soup.jpg" alt="Thai Tom Kha Soup">
+            <h3>Thai Tom Kha Soup</h3>
+            <p>Spicy and tangy coconut soup with mushrooms.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe4')">See Recipe</button>
+            <div id="recipe4" class="recipe-text">A fragrant and aromatic soup made with coconut milk, galangal, lemongrass, and mushrooms, with a balance of spicy, tangy, and creamy flavors.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/thai-veggie-fried-rice.jpg" alt="Thai Veggie Fried Rice">
+            <h3>Thai Veggie Fried Rice</h3>
+            <p>Stir-fried rice with vegetables and soy sauce.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe5')">See Recipe</button>
+            <div id="recipe5" class="recipe-text">A simple yet flavorful fried rice made with mixed vegetables, soy sauce, and a hint of Thai spices, often topped with a fried egg.</div>
+        </div>
+    </div>
+
+    <a href="vegthai.html" class="nav-button back-button">Back</a>
+
+    <script>
+        function toggleRecipe(id) {
+            var recipe = document.getElementById(id);
+            recipe.style.display = recipe.style.display === "none" || recipe.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

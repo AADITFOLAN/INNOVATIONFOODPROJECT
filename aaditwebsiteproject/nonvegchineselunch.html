@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Veg Chinese Lunch</title>
+    <style>
+        body {
+            background-image: url('assets/chinabg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Grid container */
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        /* Individual card styling */
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            border-radius: 10px;
+            width: 220px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .ingredients {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        .recipe-button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .recipe-text {
+            display: none;
+            font-size: 14px;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: rgba(240, 240, 240, 0.9);
+            color: black;
+            border-radius: 8px;
+        }
+
+        /* Navigation buttons */
+        .nav-button {
+            position: absolute;
+            font-size: 18px;
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: none;
+            cursor: pointer;
+            padding: 8px 15px;
+        }
+
+        .home-button {
+            top: 20px;
+            right: 20px;
+            color: red;
+        }
+
+        .back-button {
+            bottom: 20px;
+            right: 20px;
+            background-color: red;
+            color: black;
+            border-radius: 5px;
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Non-Veg Chinese Lunch</h1>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="assets/placeholder.jpeg" alt="Kung Pao Chicken">
+            <div class="ingredients">Ingredients: Chicken, peanuts, vegetables, spicy sauce.</div>
+            <button class="recipe-button" onclick="toggleRecipe('recipe1')">View Recipe</button>
+            <div id="recipe1" class="recipe-text">Chicken stir-fried with peanuts, vegetables, and a spicy sauce.</div>
+        </div>
+
+        <div class="card">
+            <img src="assets/placeholder.jpeg" alt="Beef with Broccoli">
+            <div class="ingredients">Ingredients: Beef, broccoli, oyster sauce.</div>
+            <button class="recipe-button" onclick="toggleRecipe('recipe2')">View Recipe</button>
+            <div id="recipe2" class="recipe-text">Sautéed beef and broccoli in a savory oyster sauce.</div>
+        </div>
+
+        <div class="card">
+            <img src="assets/placeholder.jpeg" alt="Sweet and Sour Pork">
+            <div class="ingredients">Ingredients: Pork, bell peppers, pineapple, sweet and sour sauce.</div>
+            <button class="recipe-button" onclick="toggleRecipe('recipe3')">View Recipe</button>
+            <div id="recipe3" class="recipe-text">Crispy pork pieces in a tangy and sweet sauce with bell peppers and pineapple.</div>
+        </div>
+
+        <div class="card">
+            <img src="assets/placeholder.jpeg" alt="Prawn Chow Mein">
+            <div class="ingredients">Ingredients: Prawns, noodles, vegetables, soy sauce.</div>
+            <button class="recipe-button" onclick="toggleRecipe('recipe4')">View Recipe</button>
+            <div id="recipe4" class="recipe-text">Stir-fried noodles with prawns, vegetables, and soy sauce.</div>
+        </div>
+
+        <div class="card">
+            <img src="assets/placeholder.jpeg" alt="Spicy Szechuan Chicken">
+            <div class="ingredients">Ingredients: Chicken, peppers, garlic, Szechuan sauce.</div>
+            <button class="recipe-button" onclick="toggleRecipe('recipe5')">View Recipe</button>
+            <div id="recipe5" class="recipe-text">Chicken stir-fried in a spicy Szechuan sauce with peppers and garlic.</div>
+        </div>
+    </div>
+
+    <a href="home.html" class="nav-button home-button">Food Recipe Home</a>
+    <a href="nonvegchinese.html" class="nav-button back-button">Back</a>
+
+    <script>
+        function toggleRecipe(id) {
+            var recipe = document.getElementById(id);
+            recipe.style.display = recipe.style.display === "none" || recipe.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

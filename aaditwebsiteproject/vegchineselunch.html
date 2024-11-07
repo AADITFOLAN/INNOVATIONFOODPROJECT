@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Vegetarian Lunch</title>
+    <style>
+        body {
+            background-image: url('assets/chinabg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .recipe-button {
+            display: block;
+            width: 300px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 30px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .recipe-text {
+            display: none;
+            font-size: 20px;
+            margin: 10px 0;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            border-radius: 8px;
+            width: 70%;
+            margin: 20px auto;
+        }
+
+        .nav-button {
+            position: absolute;
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        .home-button {
+            top: 20px;
+            right: 20px;
+            color: red;
+        }
+
+        .back-button {
+            bottom: 20px;
+            right: 20px;
+            background-color: red;
+            color: black;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .recipe-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .recipe-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: black;
+            width: 220px;
+            margin: 10px;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .recipe-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .recipe-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .recipe-button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .recipe-button:hover {
+            background-color: #cc0000;
+        }
+
+        .recipe-text {
+            display: none;
+            font-size: 12px;
+            margin-top: 10px;
+            padding: 8px;
+            background-color: rgba(240, 240, 240, 0.9);
+            color: black;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chinese Vegetarian Lunch</h1>
+
+    <a href="home.html" class="nav-button home-button">Food Recipe Home</a>
+
+    <div class="recipe-grid">
+        <div class="recipe-card">
+            <img src="assets/vegetable-fried-rice.jpeg" alt="Vegetable Fried Rice">
+            <h3>Vegetable Fried Rice</h3>
+            <p>Stir-fried rice with a mix of vegetables and soy sauce.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe1')">See Recipe</button>
+            <div id="recipe1" class="recipe-text">A quick and easy dish made with stir-fried rice, colorful vegetables, and soy sauce, making it a perfect lunch option.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/tofu-stir-fry.jpeg" alt="Tofu Stir Fry">
+            <h3>Tofu Stir Fry</h3>
+            <p>Crispy tofu stir-fried with vegetables in a savory sauce.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe2')">See Recipe</button>
+            <div id="recipe2" class="recipe-text">Crispy tofu cubes stir-fried with a mix of vegetables in a savory, flavorful sauce.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/chow-mein.jpeg" alt="Chow Mein">
+            <h3>Chow Mein</h3>
+            <p>Stir-fried noodles with vegetables and soy sauce.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe3')">See Recipe</button>
+            <div id="recipe3" class="recipe-text">Stir-fried noodles with crunchy vegetables and a savory soy sauce that packs a punch.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/sweet-sour-tofu.jpeg" alt="Sweet and Sour Tofu">
+            <h3>Sweet and Sour Tofu</h3>
+            <p>Tofu cubes in a tangy sweet and sour sauce with vegetables.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe4')">See Recipe</button>
+            <div id="recipe4" class="recipe-text">Sweet and sour tofu cubes served with colorful vegetables and a tangy sauce.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/vegetable-dumplings.jpeg" alt="Vegetable Dumplings">
+            <h3>Vegetable Dumplings</h3>
+            <p>Steamed vegetable-filled dumplings served with dipping sauce.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe5')">See Recipe</button>
+            <div id="recipe5" class="recipe-text">Delicious steamed dumplings filled with vegetables, served with a flavorful dipping sauce.</div>
+        </div>
+    </div>
+
+    <a href="vegchinese.html" class="nav-button back-button">Back</a>
+
+    <script>
+        function toggleRecipe(id) {
+            var recipe = document.getElementById(id);
+            recipe.style.display = recipe.style.display === "none" || recipe.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

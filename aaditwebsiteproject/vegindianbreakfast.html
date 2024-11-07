@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Indian Breakfast</title>
+    <style>
+        body {
+            background-image: url('assets/indianbg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .nav-button {
+            position: absolute;
+            font-size: 20px;
+            color: orange;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        .home-button {
+            top: 20px;
+            right: 20px;
+            color: orange;
+        }
+
+        .back-button {
+            bottom: 20px;
+            right: 20px;
+            background-color: orange;
+            color: black;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .recipe-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .recipe-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: black;
+            width: 220px;
+            margin: 10px;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .recipe-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .recipe-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .recipe-button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .recipe-button:hover {
+            background-color: #cc7a00;
+        }
+
+        .recipe-text {
+            display: none;
+            font-size: 12px;
+            margin-top: 10px;
+            padding: 8px;
+            background-color: rgba(240, 240, 240, 0.9);
+            color: black;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Veg Indian Breakfast</h1>
+
+    <a href="home.html" class="nav-button home-button">Food Recipe Home</a>
+
+    <div class="recipe-grid">
+        <div class="recipe-card">
+            <img src="assets/poha.jpeg" alt="Poha">
+            <h3>Poha</h3>
+            <p>A savory breakfast made with flattened rice, mustard seeds, and turmeric.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe1')">See Recipe</button>
+            <div id="recipe1" class="recipe-text">A simple, quick, and healthy breakfast made with flattened rice, mustard seeds, and turmeric, garnished with fresh coriander and lime.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/aloo-paratha.jpeg" alt="Aloo Paratha">
+            <h3>Aloo Paratha</h3>
+            <p>A stuffed flatbread with spiced mashed potatoes served with yogurt and pickle.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe2')">See Recipe</button>
+            <div id="recipe2" class="recipe-text">A popular North Indian dish made of soft, flaky flatbread stuffed with spiced mashed potatoes, best enjoyed with yogurt and tangy pickle.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/upma.jpeg" alt="Upma">
+            <h3>Upma</h3>
+            <p>A South Indian dish made with semolina, vegetables, and spices.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe3')">See Recipe</button>
+            <div id="recipe3" class="recipe-text">A savory and aromatic dish made with roasted semolina, sautéed vegetables, and seasoned with mustard seeds and curry leaves.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/idli.jpeg" alt="Idli">
+            <h3>Idli</h3>
+            <p>Steamed rice cakes served with coconut chutney and sambar.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe4')">See Recipe</button>
+            <div id="recipe4" class="recipe-text">Soft, fluffy rice cakes steamed to perfection, served with coconut chutney and spicy sambar for a complete breakfast.</div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="assets/dosa.jpeg" alt="Dosa">
+            <h3>Dosa</h3>
+            <p>Crispy crepes made from fermented rice and lentil batter, served with chutney and sambar.</p>
+            <button class="recipe-button" onclick="toggleRecipe('recipe5')">See Recipe</button>
+            <div id="recipe5" class="recipe-text">Crispy, golden-brown crepes made from fermented rice and lentil batter, served with chutney and sambar on the side.</div>
+        </div>
+    </div>
+
+    <a href="vegindian.html" class="nav-button back-button">Back</a>
+
+    <script>
+        function toggleRecipe(id) {
+            var recipe = document.getElementById(id);
+            recipe.style.display = recipe.style.display === "none" || recipe.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
